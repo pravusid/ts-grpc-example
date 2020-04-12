@@ -21,6 +21,9 @@ function sayWorld(call: any, callback: any) {
 }
 
 const server = new grpc.Server();
+
 server.addService(hello.Greeter.service, { sayHello, sayWorld });
 server.bind('0.0.0.0:50051', grpc.ServerCredentials.createInsecure());
 server.start();
+
+console.log('listen port: 50051');

@@ -3,16 +3,18 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server:dynamic": "ts-node src/dynamic/server.ts",
+    "client:dynamic": "ts-node src/dynamic/client.ts"
   },
   "author": "Sangdon Park",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.4",
     "@types/google-protobuf": "^3.7.2",
     "@types/node": "^13.11.1",
     "google-protobuf": "^3.11.4",
     "grpc": "^1.24.2",
+    "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   }
 }
