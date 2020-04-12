@@ -18,20 +18,20 @@ TypeScript & gRPC example
 compile proto to js
 
 ```sh
-grpc_tools_node_protoc \
-  --js_out=import_style=commonjs,binary:./src/proto \
-  --grpc_out=./src/proto \
+npx grpc_tools_node_protoc \
+  --js_out=import_style=commonjs,binary:./src/static/proto \
+  --grpc_out=./src/static/proto \
   --plugin=protoc-gen-grpc=./node_modules/.bin/grpc_tools_node_protoc_plugin \
-  -I ./src/proto \
-  ./src/proto/*.proto
+  -I ./src/static/proto \
+  ./src/static/proto/*.proto
 ```
 
 compile js to d.ts
 
 ```sh
-protoc \
+npx protoc \
   --plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
-  --ts_out=./src/proto \
-  -I ./src/proto \
-  ./src/proto/*.proto
+  --ts_out=./src/static/proto \
+  -I ./src/static/proto \
+  ./src/static/proto/*.proto
 ```
