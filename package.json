@@ -1,8 +1,10 @@
 {
   "name": "ts-grpc-example",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "TypeScript & gRPC example",
   "scripts": {
+    "server": "ts-node src/static/server.ts",
+    "client": "ts-node src/static/client.ts",
     "server:dynamic": "ts-node src/dynamic/server.ts",
     "client:dynamic": "ts-node src/dynamic/client.ts"
   },
@@ -14,6 +16,8 @@
     "@types/node": "^13.11.1",
     "google-protobuf": "^3.11.4",
     "grpc": "^1.24.2",
+    "grpc-tools": "^1.8.1",
+    "grpc_tools_node_protoc_ts": "^2.5.11",
     "ts-node": "^8.8.2",
     "typescript": "^3.8.3"
   }
